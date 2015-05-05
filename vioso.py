@@ -24,6 +24,7 @@ if __name__ == '__main__':
     driver = webdriver.Chrome()
     driver.get("http://touchpianist.com")
 
+
     args = parser.parse_args()
     try:
         element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "pixi-canvas")))
@@ -32,6 +33,3 @@ if __name__ == '__main__':
             element.click()
     finally:
         driver.quit()
-
-
-
